@@ -1,0 +1,14 @@
+# wrangler.toml is used for dev mode
+# for production, use the cloudflare dashboard
+# empty values are placeholders, replace them with your own values
+
+
+name = ""
+compatibility_date = "2023-10-30"
+
+[[d1_databases]]
+binding = "db"
+database_name = ""
+database_id = ""
+migrations_table = "migrations"
+migrations_dir = "drizzle/"

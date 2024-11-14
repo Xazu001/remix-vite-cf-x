@@ -1,0 +1,49 @@
+{
+	"name": "remix-vite-cf-x",
+	"private": true,
+	"sideEffects": false,
+	"type": "module",
+	"scripts": {
+		"lint": "biome lint",
+		"fmt": "biome format --write ./",
+		"dev": "remix vite:dev",
+		"build": "remix vite:build",
+		"start": "wrangler pages dev ./build/client",
+		"generate": "drizzle-kit generate",
+		"migrate": "drizzle-kit migrate",
+		"deploy": "wrangler pages deploy ./build/client"
+	},
+	"dependencies": {
+		"@remix-run/cloudflare": "^2.14.0",
+		"@remix-run/cloudflare-pages": "^2.14.0",
+		"@remix-run/react": "^2.14.0",
+		"dotenv": "^16.4.5",
+		"isbot": "^5.1.17",
+		"jose": "^5.9.6",
+		"kysely": "^0.27.4",
+		"kysely-d1": "^0.3.0",
+		"miniflare": "^3.20241106.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@cloudflare/workers-types": "^4.20241112.0",
+		"@remix-run/dev": "^2.14.0",
+		"@types/react": "^18.3.12",
+		"@types/react-dom": "^18.3.1",
+		"autoprefixer": "^10.4.20",
+		"drizzle-kit": "^0.28.1",
+		"drizzle-orm": "^0.36.2",
+		"postcss": "^8.4.49",
+		"tailwindcss": "^3.4.14",
+		"tsx": "^4.19.2",
+		"typescript": "^5.6.3",
+		"vite": "^5.4.11",
+		"vite-tsconfig-paths": "^5.1.2",
+		"wrangler": "^3.86.1"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}
