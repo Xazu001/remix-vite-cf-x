@@ -13,9 +13,9 @@
 		"preview": "npm run build && wrangler pages dev --local",
 		"generate": "drizzle-kit generate",
 		"migrate": "drizzle-kit migrate",
-		"deploy": "wrangler pages deploy ./build/client",
 		"migrate:local": "wrangler d1 migrations apply --local db",
-		"migrate:prod": "wrangler d1 migrations apply --remote db"
+		"migrate:prod": "wrangler d1 migrations apply --remote db",
+		"deploy": "wrangler pages deploy ./build/client"
 	},
 	"dependencies": {
 		"@remix-run/cloudflare": "^2.14.0",
