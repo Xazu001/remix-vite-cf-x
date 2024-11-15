@@ -15,6 +15,7 @@
 		"migrate": "drizzle-kit migrate",
 		"migrate:local": "wrangler d1 migrations apply --local db",
 		"migrate:prod": "wrangler d1 migrations apply --remote db",
+		"cf-typegen": "wrangler types",
 		"deploy": "wrangler pages deploy ./build/client"
 	},
 	"dependencies": {
