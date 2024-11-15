@@ -5,7 +5,7 @@ import { D1Dialect } from "kysely-d1";
 import { Kysely } from "kysely";
 
 interface Env {
-	db: D1Database;
+	DB: D1Database;
 }
 
 export type Cloudflare = Omit<PlatformProxy<Env>, "dispose">;
@@ -27,7 +27,7 @@ export const getLoadContext: GetLoadContext = ({ context }) => {
 		...context,
 		db: new Kysely<Tables>({
 			dialect: new D1Dialect({
-				database: context.cloudflare.env.db,
+				database: context.cloudflare.env.DB,
 			}),
 		}),
 	};
