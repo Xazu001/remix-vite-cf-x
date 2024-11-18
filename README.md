@@ -1,6 +1,6 @@
 # Welcome to Remix + Vite + CF (Cloudflare)
 
-This template makes your work easier! If you want to do fast setup using Remix, Vite and CF, Kysely, Drizzle and D1!
+This template makes your work easier! If you want to do fast setup using Remix, Vite and CF, Kysely, Drizzle and D1, this is for you!
 
 # Setup
 
