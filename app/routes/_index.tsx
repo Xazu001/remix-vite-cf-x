@@ -1,3 +1,4 @@
+import type { LoaderFunctionArgs } from "@remix-run/node";
 import type { MetaFunction } from "@remix-run/cloudflare";
 
 export const meta: MetaFunction = () => {
@@ -5,6 +6,12 @@ export const meta: MetaFunction = () => {
     { title: "New Remix App" },
     { name: "description", content: "Welcome to Remix!" },
   ];
+};
+
+export const loader = async ({ request, context }: LoaderFunctionArgs) => {
+  console.log(context.test);
+
+  return null;
 };
 
 export default function Index() {
