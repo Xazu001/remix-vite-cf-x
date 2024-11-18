@@ -10,10 +10,10 @@ import { getLoadContext } from "../load-context";
 const build = buildImport as unknown as ServerBuild;
 
 export const onRequest = createPagesFunctionHandler({
-	build,
-	getLoadContext,
+  build,
+  getLoadContext,
 } as {
-	build: ServerBuild;
-	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-	getLoadContext: any;
+  build: ServerBuild;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+  getLoadContext: any;
 });
