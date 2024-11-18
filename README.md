@@ -44,7 +44,7 @@ Make sure you have configured your Cloudflare account and set up the necessary e
 
 ## Guide
 
-This project is based on Remix, Drizzle, and Kysely mainly, so just look into the documentation from these libraries.
+This project is based on Remix, Kysely and Drizzle mainly, so just look into the documentation from these libraries.
 
 ### Project Structure
 
