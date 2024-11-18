@@ -7,7 +7,7 @@ Welcome to the Remix Vite CF-X template! This project is designed to help you ge
 To get started, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/your-repo/remix-vite-cf-x.git
+git clone https://github.com/Xazu001/remix-vite-cf-x.git
 cd remix-vite-cf-x
 npm install
 ```
