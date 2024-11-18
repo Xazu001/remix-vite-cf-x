@@ -4,7 +4,7 @@ import {
 } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { getLoadContext } from "./load-context";
+import { getLoadContext } from "./server/load-context";
 
 declare module "@remix-run/cloudflare" {
   interface Future {

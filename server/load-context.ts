@@ -3,7 +3,7 @@ import type { PlatformProxy } from "wrangler";
 import type { Tables } from "server/database/tables";
 import { D1Dialect } from "kysely-d1";
 import { Kysely } from "kysely";
-import { test } from "./server/services";
+import { MainService } from "./services";
 
 interface Env {
   db: D1Database;
@@ -15,7 +15,7 @@ declare module "@remix-run/cloudflare" {
   interface AppLoadContext {
     cloudflare: Cloudflare;
     db: Kysely<Tables>;
-    test: string;
+    main: MainService;
   }
 }
 
@@ -25,13 +25,15 @@ export type GetLoadContext = (args: {
 }) => AppLoadContext;
 
 export const getLoadContext: GetLoadContext = ({ context }) => {
+  const db = new Kysely<Tables>({
+    dialect: new D1Dialect({
+      database: context.cloudflare.env.db,
+    }),
+  });
+
   return {
     ...context,
-    test: test,
-    db: new Kysely<Tables>({
-      dialect: new D1Dialect({
-        database: context.cloudflare.env.db,
-      }),
-    }),
+    db,
+    main: new MainService(db),
   };
 };

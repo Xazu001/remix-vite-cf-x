@@ -9,7 +9,9 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = async ({ request, context }: LoaderFunctionArgs) => {
-  console.log(context.test);
+  const test = await context.main.test();
+
+  console.log(test);
 
   return null;
 };

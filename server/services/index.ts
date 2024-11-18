@@ -1,1 +1,1 @@
-export const test = "Hi!";
+export { MainService } from "./main";
