@@ -6,10 +6,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
-import "./tailwind.css";
+import tailwind from "./tailwind.css?url";
 
 export const links: LinksFunction = () => [
+  ...(tailwind ? [{ rel: "stylesheet", href: tailwind }] : []),
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -22,7 +22,7 @@ export const links: LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
   return (
     <html lang="en">
       <head>
@@ -32,14 +32,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
   );
-}
-
-export default function App() {
-  return <Outlet />;
 }

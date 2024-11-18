@@ -10,7 +10,11 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="flex justify-center items-center h-screen">
-      <h1 className="text-6xl">Welcome to Remix-CF-Vite-X!</h1>
+      <div className="text-center">
+        {" "}
+        <h1 className="text-6xl">Welcome to Remix-CF-Vite-X!</h1>
+        <h4 className="pt-4">Using Kysely, Drizzle and D1</h4>
+      </div>
     </div>
   );
 }
