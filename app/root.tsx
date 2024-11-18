@@ -10,18 +10,18 @@ import tailwind from "./tailwind.css?url";
 
 export const links: LinksFunction = () => [
   ...(tailwind ? [{ rel: "stylesheet", href: tailwind }] : []),
+  {
+    rel: "icon",
+    href: "/favicon.ico",
+    type: "image/x-icon",
+  },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
     href: "https://fonts.gstatic.com",
     crossOrigin: "anonymous",
   },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
 ];
-
 export default function Layout() {
   return (
     <html lang="en">
