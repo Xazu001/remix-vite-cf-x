@@ -1,3 +1,4 @@
+#:schema node_modules/wrangler/config-schema.json
 # wrangler.toml is used for dev mode
 # for production, use the cloudflare dashboard
 # empty values are placeholders, replace them with your own values
